@@ -13,7 +13,11 @@ myself and the student that submitted the copy will receive a zero on this assig
 
 #include <stdio.h>
 
-int main(int argc, char *arv[]){
+
+
+
+int main(int argc, char* argv[]){
+	/*
 	printf("Assignment 1 by Andrew Storie\n");
 	printf("This program will take inputs, and print them out one at a time\n");
 	
@@ -21,7 +25,20 @@ int main(int argc, char *arv[]){
 		printf("%s\n", arv[i]);
 	}
 
-	printf( "\nnumber of arguments printed: %d\n\n", argc);
+	printf( "\nnumber of arguments printed: %d\n\n", argc);*/
 
+	(void) argc;
+	(void) argv;
+	
+
+        int a[3] = { 2,1 };
+
+        printf("%d", a[a[1]]);
+
+
+	printf("\n\nEND\n\n");
+
+
+	
 	return 0;
 }
