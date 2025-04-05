@@ -30,6 +30,8 @@ typedef struct {
   int number;
 } ThreadArguments;
 
+// adapted trial division algorithm from
+// https://literateprograms.org/trial_division__c_.html
 int isprime(unsigned long x) {
   if (x < 2)
     return 0;

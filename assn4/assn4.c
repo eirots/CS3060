@@ -132,15 +132,13 @@ void *consumerFunction(void *arg) {
     if (factors == NULL) {
       break;
     }
-
-    // 3) Print the factors
+    // tar =cf assn4.tar.gz assn4
     printf("Factors:\t");
     for (int i = 0; factors[i] != -1; i++) {
       printf(" %d ", factors[i]);
     }
     printf("\n");
 
-    // 4) Free the factor list
     free(factors);
   }
 
@@ -234,16 +232,6 @@ int main(int argc, char *argv[]) {
   pthread_cond_signal(&numsNotEmpty);
   pthread_mutex_unlock(&numbersMutex);
 
-  /*
-   ProducerArgs p;
-  p.argc = argc;
-  p.argv = argv;
-
-  pthread_t producerThread, consumerThread;
-
-  pthread_create(&producerThread, NULL, producerFunction, &p);
-  pthread_create(&consumerThread, NULL, consumerFunction, &p);
-*/
   pthread_join(producerThread, NULL);
   pthread_join(consumerThread, NULL);
 
